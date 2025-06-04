@@ -18,7 +18,7 @@ load_dotenv()
 # 基础配置函数，每次调用时都从环境变量获取最新值
 def get_base_prefix():
     """获取工作站域名前缀，优先使用环境变量"""
-    return os.environ.get("BASE_PREFIX", "9000-idx-sherry-")
+    return os.environ.get("BASE_PREFIX", "80-firebase-myapp-")
 
 def get_domain_pattern():
     """获取工作站域名匹配模式"""
