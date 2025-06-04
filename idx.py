@@ -209,7 +209,7 @@ def check_page_status_with_requests():
         # 预设值
         preset_jwt = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiaWR4LXNoZXJyeS0xNzQ1NzUyMjgzNzQ5LmNsdXN0ZXItaWt4anpqaGxpZmN3dXJvb21ma2pyeDQzN2cuY2xvdWR3b3Jrc3RhdGlvbnMuZGV2IiwiaWF0IjoxNzQ2NzA3MDU1LCJleHAiOjE3NDY3OTMzOTV9.mRGJrxhTNmJ-YTit_SHGSJs9UDIOrBmgRrCqIX0Jio_orzUoVx7MtEzCfR5M2QJonVi98cOJjp0TfDpeNuJ3jnVj9GK0dZjO4bd26eAylCLU-UVt6TStzJLEYohJZHC71naMHDpLTHAajGvT4axxY_EGfyqt5GhjMMOCz_-vTeK_fmIayctGjMVGkogYimmoKfOHKzBkPgT4kSNbUA4NPjAUILVOmjxLcUmksPSdHXAPkO9Q4NEcjNQ2-b3Ax5BlF2W6Ae13pH9NgHPxeaGd2NwmJl5nivRop3E1X7LQ49YLAHGmCzD6D8z4qtoNjC8FibhlRBGvty48sYtexOn13g'
         # 使用当前设置的前缀构建域名
-        preset_url = f'https://{get_base_prefix()}1745752283749.cluster-ikxjzjhlifcwuroomfkjrx437g.cloudworkstations.dev/'
+        preset_url = f'https://{get_base_prefix()}1748946114276.cluster-lqnxvk7thvfw4wbonsercicksm.cloudworkstations.dev/'
         
         # 从cookie文件中提取JWT(如果存在)
         jwt = preset_jwt
@@ -278,7 +278,7 @@ def extract_domain_from_jwt(jwt_value=None):
         
         if not jwt_value:
             log_message("无法找到JWT值，将使用默认域名")
-            return f"https://{get_base_prefix()}1745752283749.cluster-ikxjzjhlifcwuroomfkjrx437g.cloudworkstations.dev"
+            return f"https://{get_base_prefix()}1748946114276.cluster-lqnxvk7thvfw4wbonsercicksm.cloudworkstations.dev"
             
         # 解析JWT获取域名信息
         parts = jwt_value.split('.')
@@ -317,13 +317,13 @@ def extract_domain_from_jwt(jwt_value=None):
                         return full_domain
         
         # 如果提取失败，使用默认域名
-        default_domain = f"https://{get_base_prefix()}1745752283749.cluster-ikxjzjhlifcwuroomfkjrx437g.cloudworkstations.dev"
+        default_domain = f"https://{get_base_prefix()}1748946114276.cluster-lqnxvk7thvfw4wbonsercicksm.cloudworkstations.dev"
         log_message(f"使用默认域名: {default_domain}")
         return default_domain
     except Exception as e:
         log_message(f"提取域名时出错: {e}")
         log_message(traceback.format_exc())
-        return f"https://{get_base_prefix()}1745752283749.cluster-ikxjzjhlifcwuroomfkjrx437g.cloudworkstations.dev"
+        return f"https://{get_base_prefix()}1748946114276.cluster-lqnxvk7thvfw4wbonsercicksm.cloudworkstations.dev"
 
 def extract_and_display_credentials():
     """从cookie.json中提取并显示云工作站域名和JWT"""
