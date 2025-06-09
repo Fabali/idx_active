@@ -537,7 +537,8 @@ async def click_workspace_icon(page):
     # 工作区图标选择器列表
     selectors = [
         'div[class="workspace-icon"]',
-        'img[src="https://www.gstatic.com/monospace/250314/workspace-blank-192.png"]',
+        # 'img[src="https://www.gstatic.com/monospace/250314/workspace-blank-192.png"]',
+        'img[src="https://www.gstatic.com/monospace/240709/logo_android_studio_192.png"]',
         '.workspace-icon',
         'img[role="presentation"][class="custom-icon"]',
         'div[_ngcontent-ng-c2464377164][class="workspace-icon"]',
